@@ -2,7 +2,7 @@ import { createClient } from "@/utils/supabase/server";
 import { notFound } from "next/navigation";
 import VehicleView from "./VehicleView";
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 async function getVehiculoYMantenciones(id: string) {
     const supabase = await createClient();

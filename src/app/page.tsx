@@ -4,7 +4,8 @@ import Link from "next/link";
 import VehicleList from "./components/VehicleList";
 import ExportButton from "./components/ExportButton";
 
-export const revalidate = 0;
+// Cache for 60 seconds — good balance between freshness and speed
+export const revalidate = 60;
 
 export default async function Home() {
   const supabase = await createClient();
