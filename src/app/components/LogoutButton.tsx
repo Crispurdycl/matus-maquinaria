@@ -3,7 +3,19 @@
 import { LogOut } from "lucide-react";
 import { logout } from "../login/actions";
 
-export default function LogoutButton() {
+export default function LogoutButton({ isMobile = false }: { isMobile?: boolean }) {
+    if (isMobile) {
+        return (
+            <button
+                onClick={() => logout()}
+                className="flex flex-col items-center justify-center w-full h-full text-red-400 hover:bg-slate-800/50 transition-colors"
+            >
+                <LogOut className="w-5 h-5 mb-1" />
+                <span className="text-[10px] font-medium">Salir</span>
+            </button>
+        );
+    }
+
     return (
         <button
             onClick={() => logout()}
