@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Truck } from "lucide-react";
 import Link from "next/link";
+import InactivityTimer from "./components/InactivityTimer";
+import LogoutButton from "./components/LogoutButton";
 
 export const metadata: Metadata = {
   title: "Matus Maquinaria",
@@ -48,10 +50,15 @@ export default function RootLayout({
               <span className="text-[10px] mt-1 font-medium">Inventario</span>
             </Link>
           </nav>
+          {/* Logout button at bottom */}
+          <div className="p-4 border-t border-slate-700/50 hidden md:block">
+            <LogoutButton />
+          </div>
         </aside>
 
         {/* Main Content Area */}
         <main className="flex-1 md:ml-64 p-4 md:p-8 overflow-x-hidden min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <InactivityTimer />
           <div className="max-w-7xl mx-auto">
             {children}
           </div>
