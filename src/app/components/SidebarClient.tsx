@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Truck, Search } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import LogoutButton from "./LogoutButton";
 
 export default function SidebarClient({ initialVehicles }: { initialVehicles: any[] }) {
     const [searchTerm, setSearchTerm] = useState("");
@@ -64,6 +65,11 @@ export default function SidebarClient({ initialVehicles }: { initialVehicles: an
                         </Link>
                     );
                 })}
+            </div>
+
+            {/* User Actions */}
+            <div className="p-4 border-t border-slate-700/50">
+                <LogoutButton />
             </div>
         </aside>
     );
