@@ -32,7 +32,7 @@ export default async function Home() {
         <div className="flex items-center gap-3">
           <ExportButton />
           <Link
-            href="/"
+            href="/nuevo-vehiculo"
             className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl flex items-center gap-2 transition-all shadow-lg shadow-blue-500/20 font-medium whitespace-nowrap"
           >
             <Plus className="w-5 h-5" />
