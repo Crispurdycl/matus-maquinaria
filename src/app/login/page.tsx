@@ -20,7 +20,7 @@ export default async function LoginPage({
                     </div>
 
                     <h1 className="text-2xl font-bold text-white mb-2 text-center">
-                        Matus Maquinaria
+                        Maquinaria Online
                     </h1>
                     <p className="text-slate-400 text-sm mb-8 text-center">
                         Ingresa tus credenciales para acceder al sistema de gestión de mantenciones.

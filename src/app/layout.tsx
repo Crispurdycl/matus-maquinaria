@@ -6,7 +6,7 @@ import InactivityTimer from "./components/InactivityTimer";
 import LogoutButton from "./components/LogoutButton";
 
 export const metadata: Metadata = {
-  title: "Matus Maquinaria",
+  title: "Maquinaria Online",
   description: "Sistema de gestión de mantenciones de maquinaria y vehículos Matus",
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({
               <Truck className="w-6 h-6 text-white" />
             </div>
             <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-              Matus Maquinaria
+              Maquinaria Online
             </h1>
           </div>
 
