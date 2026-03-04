@@ -1,10 +1,11 @@
-import { supabase } from "@/lib/supabase";
+import { createClient } from "@/utils/supabase/server";
 import { notFound } from "next/navigation";
 import VehicleView from "./VehicleView";
 
 export const revalidate = 0;
 
 async function getVehiculoYMantenciones(id: string) {
+    const supabase = await createClient();
     const { data: vehiculo, error: vError } = await supabase
         .from("vehiculos")
         .select("*")

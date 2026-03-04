@@ -37,7 +37,7 @@ export default async function LoginPage({
                                 type="email"
                                 required
                                 className="w-full bg-slate-800/80 border border-slate-600 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-white placeholder-slate-500"
-                                placeholder="admin@matus.cl"
+                                placeholder="tucorreo@gmail.cl"
                             />
                         </div>
 

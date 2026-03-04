@@ -1,12 +1,13 @@
-import { supabase } from "@/lib/supabase";
+import { createClient } from "@/utils/supabase/server";
 import { Plus } from "lucide-react";
 import Link from "next/link";
 import VehicleList from "./components/VehicleList";
 import ExportButton from "./components/ExportButton";
 
-export const revalidate = 0; // Disable static caching so it always fetches fresh data
+export const revalidate = 0;
 
 export default async function Home() {
+  const supabase = await createClient();
   // Fetch vehicles sorted by creation date (newest first)
   const { data: vehiculos, error } = await supabase
     .from("vehiculos")
