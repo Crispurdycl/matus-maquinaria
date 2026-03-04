@@ -87,12 +87,13 @@ export default function VehicleView({ vehiculo, mantenciones }: { vehiculo: any,
                                     <th className="p-4 w-24">MES</th>
                                     <th className="p-4 w-32">AÑO</th>
                                     <th className="p-4">DETALLE REALIZADO</th>
+                                    <th className="p-4 w-36 text-right">MONTO ($)</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-700/50">
                                 {filteredMantenciones.length === 0 ? (
                                     <tr>
-                                        <td colSpan={4} className="p-8 text-center text-slate-400 font-medium">
+                                        <td colSpan={5} className="p-8 text-center text-slate-400 font-medium">
                                             No se encontraron mantenciones.
                                         </td>
                                     </tr>
@@ -103,6 +104,9 @@ export default function VehicleView({ vehiculo, mantenciones }: { vehiculo: any,
                                             <td className="p-4 text-slate-300 font-medium">{String(m.mes).padStart(2, '0')}</td>
                                             <td className="p-4 text-slate-300 font-medium">{m.anio}</td>
                                             <td className="p-4 text-white">{m.detalle}</td>
+                                            <td className="p-4 text-right font-mono font-bold text-emerald-400">
+                                                {m.monto ? `$${Number(m.monto).toLocaleString('es-CL')}` : '—'}
+                                            </td>
                                         </tr>
                                     ))
                                 )}
